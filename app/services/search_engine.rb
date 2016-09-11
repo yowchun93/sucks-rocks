@@ -1,6 +1,6 @@
 require 'vcr'
 class SearchEngine
   def self.count_results(query)
-    0
+    results = GoogleCustomSearchApi.search(query).queries.request[0]["totalResults"]
   end
 end
