@@ -27,7 +27,9 @@ describe RockScore do
   end
 
   it "does not divide by zero" do 
-    
+    allow(SearchEngine).to receive(:count_results).with("apple rocks").and_return(9)
+    allow(SearchEngine).to receive(:count_results).with("apple sucks").and_return(11)
+    expect(RockScore.for_term("apple")).to eq(nil)
   end
 
 end
