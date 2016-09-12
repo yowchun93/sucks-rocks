@@ -1,20 +1,6 @@
 require_relative "../../app/services/rock_score"
 require_relative "../../app/services/score_cache"
 
-# to allow network to work
-# require "rails_helper"
-
-class CachedScore
-  class NoScore < RuntimeError; end
-  def self.for_term(term)
-
-  end
-
-  def self.save_score(term,score)
-
-  end
-end
-
 describe ScoreCache do 
 
   it "returns cached results if they exist" do 

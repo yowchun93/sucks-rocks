@@ -2,6 +2,10 @@ require 'pry'
 require_relative "../../app/services/search_engine"
 class RockScore 
 
+  class NoScore < RuntimeError
+    
+  end
+
   def initialize(printer)
     @printer = printer
   end
