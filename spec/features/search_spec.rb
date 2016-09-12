@@ -7,12 +7,14 @@ feature "Signing in" do
    @scores[term] = RockScore.for_term(term)
   end
 
-  scenario "user search for microsoft" do 
-    
+  scenario "apple should have higher score than microsoft" do 
+    apple_score = RockScore.for_term("apple")
+    microsoft_score = RockScore.for_term("microsoft")
+    expect(apple_score).to be > microsoft_score
   end
 
   scenario "user search for apple" do 
-
+    
   end
 
 end

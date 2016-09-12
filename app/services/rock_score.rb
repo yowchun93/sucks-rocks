@@ -1,4 +1,5 @@
 require 'pry'
+require_relative "../../app/services/search_engine"
 class RockScore 
 
   def initialize(printer)
